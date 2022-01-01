@@ -43,6 +43,6 @@ public class DietController {
 	 @PostMapping("/ftdata")
 		public String ftdata(@ModelAttribute("diet") Diet diet) {
 			dietservice.adddietrecord(diet);
-			return "redirect:/viewdiet";
+			return "redirect:/admin_home";
 		}
 }

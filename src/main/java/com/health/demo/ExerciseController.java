@@ -54,6 +54,6 @@ public class ExerciseController {
 	 @PostMapping("/stdata")
 		public String stdata(@ModelAttribute("exercise") Exercise exercise) {
 			exerciseservice.addexerciserecord(exercise);
-			return "redirect:/viewexer";
+			return "redirect:/admin_home";
 		}
 }

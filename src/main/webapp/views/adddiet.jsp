@@ -154,8 +154,8 @@ h2
   </div>
 </div>
 <div class="loginBox">
-<img src="https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png" class="user">
-<h2>Add Exercise</h2>
+<!--  <img src="https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png" class="user"> -->
+<h2>Add Diet</h2>
 <form:form method="post" action="/ftdata" modelAttribute="diet" >
 <center>
 <div class="textbox">

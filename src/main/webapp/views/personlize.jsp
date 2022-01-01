@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>Home</title>
+    <title>Personalize</title>
 
     
     <link rel="stylesheet" href="style2.css">
@@ -142,7 +142,7 @@
               
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="cart.html" class="btn btn-primary my-2">Normal Weight</a>
+                  <a href="uweight" class="btn btn-primary my-2">Normal Weight</a>
                 </div>
                 
               </div>
@@ -157,7 +157,7 @@
               
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="cart.html" class="btn btn-primary my-2">Over Weight</a>
+                  <a href="uweight" class="btn btn-primary my-2">Over Weight</a>
                 </div>
                 
               </div>

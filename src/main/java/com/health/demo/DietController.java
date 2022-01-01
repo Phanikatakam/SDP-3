@@ -22,4 +22,27 @@ public class DietController {
 		mv.addObject("dietdata", diet);
 		return mv;
 	}
+	@GetMapping("/addfood")
+	public ModelAndView dietadd() {
+		return new ModelAndView("adddiet.jsp","diet",new Diet());
+	}
+	@PostMapping("/adddiet")
+	public ModelAndView adddiet(@ModelAttribute("diet") Diet diet) {
+		dietservice.adddietrecord(diet);
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("viewdiet.jsp");
+		mv.addObject("fname",diet.getFname());
+		return mv;
+	}
+	@GetMapping("/diet/delete/{fname}")
+	  public String deleteemployeerecord(@PathVariable("fname") String fname)
+	  {
+		dietservice.deletedrecord(fname);
+		return "redirect:/viewdiet";
+	  }
+	 @PostMapping("/ftdata")
+		public String ftdata(@ModelAttribute("diet") Diet diet) {
+			dietservice.adddietrecord(diet);
+			return "redirect:/viewdiet";
+		}
 }

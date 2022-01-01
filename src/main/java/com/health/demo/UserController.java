@@ -29,6 +29,12 @@ public class UserController {
 	      mv.setViewName("user_home.jsp");
 	      return mv;
 	}
+	@GetMapping("/admin_home")
+	public ModelAndView admin_home() {
+		ModelAndView mv = new ModelAndView();
+	      mv.setViewName("admin_home.jsp");
+	      return mv;
+	}
 	@GetMapping("/personalize")
 	public ModelAndView personalize() {
 		ModelAndView mv = new ModelAndView();
@@ -84,15 +90,19 @@ HttpSession session=request.getSession(); // creating session variable as same a
 //String unm=session.get(User.class,username);
 //String uname = null;
 //User user = new User();
-ModelAndView mv=new ModelAndView();
 //session.setAttribute("username", user.getUsername());
 // other code
-if(username.equals("Chaitu") && password.equals("Chaitu@02")) {
-	mv.setViewName("user_home.jsp");
+ModelAndView mv=new ModelAndView();
+if(username.equals("admin") && password.equals("Chaitu@02")) {
+	mv.setViewName("admin_home.jsp");
+	return mv;
+}
+else if(password.equals("qwerty")){
+	mv.setViewName("login_error.jsp");
 	return mv;
 }
 else {
-mv.setViewName("login_error.jsp");
+	mv.setViewName("user_home.jsp");
 return mv;
 }
 }

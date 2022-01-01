@@ -1,12 +1,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-<title>Add exer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<title>Add exer</title>
 </head>
 <style>
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
@@ -27,7 +27,7 @@ body
 	left:50%;
 	transform: translate(-50%, -50%);
 	width:350px;
-	height:350px;
+	height:400px;
 	padding:80px 40px;
 	border-radius: 25px;
 	box-sizing: border-box;
@@ -140,7 +140,7 @@ h2
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+   <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="admin_home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="addexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Exercises</a>
     <a href="addfood" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Diet</a>
@@ -156,12 +156,14 @@ h2
 <div class="loginBox">
 <img src="https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png" class="user">
 <h2>Add Exercise</h2>
-<form:form method="post" action="/stdata" modelAttribute="exercise" >
+<form:form method="post" action="/ftdata" modelAttribute="diet" >
 <center>
 <div class="textbox">
-<i class="fas fa-user"></i><form:input placeholder="Exercise" path="ename" required="required"/></div>
+<i class="fas fa-user"></i><form:input placeholder="Food item" path="fname" required="required"/></div>
 <div class="textbox">
-<i class="fas fa-user"></i><form:input placeholder="No. of Times"  path="ntimes" required="required"/></div>
+<i class="fas fa-user"></i><form:input placeholder="No. of Times"  path="count" required="required"/></div>
+<div class="textbox">
+<i class="fas fa-user"></i><form:input placeholder="Serving"  path="serving" required="required"/></div>
 <br>
 <input type="submit"  value="Add"/>
 </center>

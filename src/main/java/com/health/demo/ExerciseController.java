@@ -47,4 +47,13 @@ public class ExerciseController {
 		exerciseservice.deleteerecord(ename);
 		return "redirect:/viewexer";
 	  }
+	 @GetMapping("/addexer")
+		public ModelAndView addexer() {
+			return new ModelAndView("addexer.jsp","exercise",new Exercise());
+		}
+	 @PostMapping("/stdata")
+		public String stdata(@ModelAttribute("exercise") Exercise exercise) {
+			exerciseservice.addexerciserecord(exercise);
+			return "redirect:/viewexer";
+		}
 }

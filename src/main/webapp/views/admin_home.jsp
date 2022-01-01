@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>HOME</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+	<title>Home</title>
+</head>
+<style></style>
 <body>
-
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEATURES</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="admin_home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="addexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Exercises</a>
+    <a href="addfood" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Diet</a>
+    <a href="viewallusers" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View All Users</a>
 
     
 
    
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-    <a  class="w3-bar-item w3-button w3-padding-large w3-hide-small" style=" position:absolute; top:0; right:0" href="register">LOGIN</a>
+    <a  class="w3-bar-item w3-button w3-padding-large w3-hide-small" style=" position:absolute; top:0; right:0" href="login">LOG OUT</a>
   </div>
 </div>
-
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
@@ -38,10 +35,10 @@ body {font-family: "Lato", sans-serif}
   <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <!-- Automatic Slideshow Images -->
+<!-- <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
   <div class="mySlides w3-display-container w3-center">
     <img src="https://www.healthtap.com/guest-assets/_/_/_/src/images/og/ogImage.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
@@ -62,7 +59,7 @@ body {font-family: "Lato", sans-serif}
      
           
     </div>
-  </div>
+  </div> -->
 
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
@@ -99,7 +96,7 @@ body {font-family: "Lato", sans-serif}
             <p><b>BMI</b></p>
             
             <p>Based on your Weight and Height BMI is calculated.</p>
-            <!--  <button class="w3-button w3-black w3-margin-bottom" onclick="login">View More</button> -->
+           <!--   <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button> -->
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -108,7 +105,7 @@ body {font-family: "Lato", sans-serif}
             <p><b>DIET</b></p>
             <p class="w3-opacity"></p>
             <p>Based on BMI DIET is suggested to follow.</p>
-          <!--   <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>-->
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button> -->
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -117,7 +114,7 @@ body {font-family: "Lato", sans-serif}
             <p><b>EXERCISES</b></p>
             
             <p>Based on BMI EXERCISE is suggested.</p>
-           <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button> --> 
+          <!--  <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button -->
           </div>
         </div>
       </div>

@@ -143,7 +143,7 @@ h2
 		<form method="post" action="/checkuser">
 			<div class="textbox">
                   <i class="fas fa-user"></i>
-                  <input type="text" name="username" placeholder="Username" required autofocus="autofocus">
+                  <input type="text" name="username" placeholder="Email" required autofocus="autofocus">
             </div><br>
 			<div class="textbox">
                  <i class="fas fa-lock"></i>

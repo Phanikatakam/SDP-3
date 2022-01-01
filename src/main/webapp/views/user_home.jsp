@@ -3,11 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Personalize</title>
+	<title>Home</title>
 </head>
 <style></style>
 <body>
@@ -97,7 +96,7 @@
             <p><b>BMI</b></p>
             
             <p>Based on your Weight and Height BMI is calculated.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>
+           <!--   <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button> -->
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -106,7 +105,7 @@
             <p><b>DIET</b></p>
             <p class="w3-opacity"></p>
             <p>Based on BMI DIET is suggested to follow.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button> -->
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -115,7 +114,7 @@
             <p><b>EXERCISES</b></p>
             
             <p>Based on BMI EXERCISE is suggested.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>
+          <!--  <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button -->
           </div>
         </div>
       </div>

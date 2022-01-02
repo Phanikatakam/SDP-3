@@ -7,13 +7,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name="User_Table")
 public class User {
-	@Id
 	@Column(name="fname")
 	private String fname;
 	@Column(name="lname")
 	private String lname;
 	@Column(name="email")
 	private String email;
+	@Id
 	@Column(name="username")
 	private String username;
 	@Column(name="password")

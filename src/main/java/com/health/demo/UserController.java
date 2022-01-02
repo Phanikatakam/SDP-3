@@ -17,6 +17,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 	@Autowired
 	UserService userservice;
+	@GetMapping("/")
+	public ModelAndView error() {
+		ModelAndView mv = new ModelAndView();
+	      mv.setViewName("login_error.jsp");
+	      return mv;
+	}
 	@GetMapping("/home")
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView();
@@ -45,6 +51,12 @@ public class UserController {
 	public ModelAndView calc() {
 		ModelAndView mv = new ModelAndView();
 	      mv.setViewName("calc.html");
+	      return mv;
+	}
+	@GetMapping("/calcinc")
+	public ModelAndView calcinc() {
+		ModelAndView mv = new ModelAndView();
+	      mv.setViewName("calcinc.html");
 	      return mv;
 	}
 	@GetMapping("/login")
@@ -92,19 +104,23 @@ HttpSession session=request.getSession(); // creating session variable as same a
 //User user = new User();
 //session.setAttribute("username", user.getUsername());
 // other code
+
 ModelAndView mv=new ModelAndView();
+try {
+User u=userservice.findById(username);
+String pwd = u.getPassword();
+System.out.println(pwd);
 if(username.equals("admin") && password.equals("Chaitu@02")) {
 	mv.setViewName("admin_home.jsp");
-	return mv;
 }
-else if(password.equals("qwerty")){
-	mv.setViewName("login_error.jsp");
-	return mv;
-}
-else {
+else if(password.equals(pwd)){
 	mv.setViewName("user_home.jsp");
-return mv;
 }
+}
+catch(Exception e) {
+mv.setViewName("login_error.jsp");
+}
+return mv;
 }
 
 }

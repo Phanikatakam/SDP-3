@@ -1,7 +1,7 @@
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-<title>Diets</title>
+<title>Exercises</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -43,10 +43,12 @@
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="user_home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="calc" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BMI</a>
-    <a href="personalize" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personalize</a>
-    
+    <a href="admin_home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="addexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Exercises</a>
+    <a href="addfood" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Diet</a>
+    <a href="viewallusers" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View All Users</a>
+    <a href="viewexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View Exercises</a>
+    <a href="viewdiet" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View Diets</a>    
 
    
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -59,24 +61,22 @@
 <h2></h2>
 <br>
 <br>
-<h2 align=center style="color:black"><i><b>View Diet</b></i></h2>
+<h2 align=center style="color:black"><i><b>View Exercises</b></i></h2>
 <br>
 <div style="overflow-x:auto;">
 <center>
 <div class="table-responsive-sm">
 <table class="table">
 <tr class="table-active">
-<th scope="col">Food</th>
-<th scope="col">Calories per Serving</th>
-<th scope="col">Serving Size</th>
+<th scope="col">Exercise</th>
+<th scope="col">Suggested times</th>
 <th scope="col">Status</th>
 </tr>
- <c:forEach var="diet" items="${dietdata}">
+ <c:forEach var="exercise" items="${exercisedata}">
 <tr class="table-default">
-<th scope="col">${diet.fname}</th>
-<th scope="col">${diet.count}</th>
-<th scope="col">${diet.serving}</th>
-<th scope="col"><a href="/diet/delete/${diet.fname}">Done</a></th>
+<th scope="col">${exercise.ename}</th>
+<th scope="col">${exercise.ntimes}</th>
+<th scope="col"><a href="/exercise/delete/${exercise.ename}">Done</a></th>
 </tr>
 </c:forEach>
 </div>

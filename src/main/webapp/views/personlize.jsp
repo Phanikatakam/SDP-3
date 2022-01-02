@@ -76,7 +76,6 @@
    <a href="user_home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="calc" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BMI</a>
     <a href="personalize" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personalize</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Progress</a>
 
     
 

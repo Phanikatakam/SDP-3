@@ -48,7 +48,9 @@
     <a href="addexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Exercises</a>
     <a href="addfood" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Diet</a>
     <a href="viewallusers" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View All Users</a>
-
+    <a href="viewexer" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View Exercises</a>
+    <a href="viewdiet" class="w3-bar-item w3-button w3-padding-large w3-hide-small">View Diets</a>
+    
     
 
    

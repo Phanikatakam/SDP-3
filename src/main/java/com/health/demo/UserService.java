@@ -16,4 +16,7 @@ public class UserService {
 	public List<User> getalluserrecords() {
 		return (List<User>)userrepository.findAll();
 	}
+	public User findById(String uname) {
+		return userrepository.findById(uname).get();
+	}
 }

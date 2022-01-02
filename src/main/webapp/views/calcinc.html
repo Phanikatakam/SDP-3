@@ -19,9 +19,12 @@ function calculateBMI() {
 
 	/* Getting input from user into height variable.
 	Input is string so typecasting is necessary. */
-	let height = parseInt(document
-			.querySelector("#height").value);
+	let heightf = parseInt(document
+			.querySelector("#heightf").value);
 
+	let heighti = parseInt(document
+			.querySelector("#heighti").value);
+	let height=(heightf*12 + heighti);
 	/* Getting input from user into weight variable.
 	Input is string so typecasting is necessary.*/
 	let weight = parseInt(document
@@ -31,8 +34,11 @@ function calculateBMI() {
 
 	// Checking the user providing a proper
 	// value or not
-	if (height === "" || isNaN(height))
-		result.innerHTML = "Provide a valid Height!";
+	if (heightf === "" || isNaN(heightf))
+		result.innerHTML = "Provide a valid Height in feet!";
+	
+	else if (heighti === "" || isNaN(heighti))
+		result.innerHTML = "Provide a valid Height in inches!";
 
 	else if (weight === "" || isNaN(weight))
 		result.innerHTML = "Provide a valid Weight!";
@@ -41,7 +47,9 @@ function calculateBMI() {
 	else {
 
 		// Fixing upto 2 decimal places
-		let bmi = (weight / ((height * height)
+		
+		
+		let bmi = (weight / ((height * height * 2.54 * 2.54)
 							/ 10000)).toFixed(2);
 
 		// Dividing as per the bmi conditions
@@ -73,7 +81,7 @@ function calculateBMI() {
 	left:50%;
 	transform: translate(-50%, -50%);
 	width:350px;
-	height:440px;
+	height:485px;
 	padding:40px 40px;
 	border-radius: 25px;
 	box-sizing: border-box;
@@ -168,18 +176,22 @@ function calculateBMI() {
 		<h1 style="text-align: center;">BMI Calculator</h1>
 		<table>
 			<tr>
-				<td><p style="font-size: 18px;"><b>Height (in cm)</b></p></td>
-		<td><input type="text" id="height" placeholder="Enter Your Height"></td>
+				<td><p style="font-size: 12px;"><b>Height (in feet)</b></p></td>
+		    <td><input type="text" id="heightf" placeholder="Enter Your Height"></td>
 			</tr>
 			<tr>
-		 <td><p style="font-size: 18px;"><b>Weight (in kg)</b></p></td>
+				<td><p style="font-size: 12px;"><b>Height (in inches)</b></p></td>
+		<td><input type="text" id="heighti" placeholder="Enter Your Height"></td>
+			</tr>
+			<tr>
+		 <td><p style="font-size: 9px;"><b>Weight (in kg)</b></p></td>
 		<td><input type="text" id="weight" placeholder="Enter Your Weight"></td>
 		</tr>
 	</table><div class="btn">
 		<button id="btn">Calculate</button>
 		</div>
 		<br>
-		<center><a href="calcinc">calculate in inches</a></center>
+		<center><a href="calc">calculate in cm</a></center>
 		<br>
 		<b><div id="result" style="font-size: 18px; color: white;"></div></b>
 	</div>
